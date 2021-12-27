@@ -5,31 +5,34 @@ import styled from 'styled-components';
 import { StyledContainer } from '../styles/globals';
 
 const MobileNav = styled.nav`
-  .menu-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  @media (max-width: 375px) {
+    display: block;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.06);
+    padding: 1.2rem 0;
 
-    .cog {
-      font-size: 2rem;
-    }
+    .menu-items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5rem;
 
-    h1 {
-      font-size: 4rem;
-      justify-self: flex-start;
-      cursor: pointer;
-    }
+      h1 {
+        font-size: 6rem;
+      }
 
-    .user img {
-      width: 30px;
-      cursor: pointer;
-    }
+      .cog img {
+        width: 30px;
+        margin-left: 4rem;
+      }
 
-    @media (max-width: 375px) {
-      .menu-items {
-        display: block;
+      .user img {
+        width: 80px;
       }
     }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 `;
 

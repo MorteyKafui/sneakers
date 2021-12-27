@@ -32,6 +32,17 @@ const StyledHeader = styled.header`
       }
     }
   }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    .img-cards div img {
+      display: none;
+    }
+  }
 `;
 
 const StyledHeroContents = styled.div`
@@ -92,6 +103,11 @@ const StyledHeroContents = styled.div`
       color: var(--grayish-blue-color);
       margin-bottom: 1.3rem;
     }
+  }
+
+  @media (max-width: 375px) {
+    width: 100%;
+    margin: 0;
   }
 `;
 

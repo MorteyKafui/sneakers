@@ -65,6 +65,10 @@ const StyledContent = styled.div`
       width: 50px;
     }
   }
+
+  @media (max-width: 375px) {
+    display: none;
+  }
 `;
 
 const Navbar = () => {
@@ -102,7 +106,7 @@ const Navbar = () => {
           </StyledContent>
         </StyledContainer>
       </StyledNav>
-      {/* <Menu show={displayNavbar} /> */}
+      <Menu />
     </>
   );
 };
